@@ -4,76 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Links</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
     <style>
         body {
-            background-color: #f8f9fa; /* Warna background abu-abu muda */
+            margin: 0;
+            height: 100vh;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b, #020617);
+            color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .profile-container {
-            max-width: 500px;
-            margin: 50px auto;
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            width: 100%;
+            max-width: 420px;
             text-align: center;
-            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
+
         .profile-img {
             width: 100px;
             height: 100px;
             border-radius: 50%;
             object-fit: cover;
+            border: 2px solid rgba(255,255,255,0.2);
             margin-bottom: 15px;
-            border: 3px solid #fff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin: 0 auto 15px auto;
+            display: block;
         }
+
+        h2 {
+            font-weight: 700;
+            letter-spacing: 1px;
+            color:#e2e8f0;
+        }
+
+        p {
+            color: #94a3b8;
+        }
+
         .btn-custom {
-            margin-bottom: 15px;
+            width: 100%;
             padding: 12px;
-            font-weight: 500;
-            transition: transform 0.2s;
-            border-radius: 10px;
+            border-radius: 12px;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: 10px;
+            font-weight: 500;
+            transition: all 0.25s ease;
             text-decoration: none;
         }
+
         .btn-custom:hover {
-            transform: scale(1.02);
+            transform: translateY(-3px);
+            opacity: 0.9;
         }
-        .btn-instagram { background-color: #E1306C; color: white; }
-        .btn-tiktok { background-color: #000000; color: white; }
-        .btn-discord { background-color: #5865F2; color: white; }
-        .btn-website { background-color: #6c757d; color: white; }
-        
-        i { margin-right: 10px; }
+
+        .btn-trakteer { 
+            background-color: #be1e2d;
+            color: white; 
+        }
+
+        .btn-trakteer:hover {
+            background-color: #a01926;
+            color: white;
+        }
+
+        .btn-discord { background: #5865F2; color: white; }
+        .btn-tiktok { background: #000; color: white; }
+        .btn-disabled { background: #334155; color: #94a3b8; }
+
+        .footer-text {
+            font-size: 12px;
+            color: #64748b;
+            margin-top: 10px;
+        }
     </style>
 </head>
+
 <body>
 
-    <div class="container">
-        <div class="profile-container">
-            <img src="profile.jpg" alt="Profile" class="profile-img">
-            
-            <h2 class="fw-bold">Chapphyy</h2>
-            <p class="text-muted">Hola</p>
-            <hr>
+    <div class="card">
+        <img src="profile.jpg" class="profile-img">
 
-            <a href="https://discord.gg/jHekkZU6" class="btn btn-custom btn-discord" target="_blank">
+        <h2>Chapphyy</h2>
+        <p>Hola | Welcome to my page</p>
+
+        <div class="mt-4">
+
+            <a href="https://discord.gg/jHekkZU6" target="_blank" class="btn-custom btn-discord">
                 <i class="fab fa-discord"></i> Discord
             </a>
 
-            <a href="https://tiktok.com/@ur.469983" class="btn btn-custom btn-tiktok" target="_blank">
+            <a href="https://tiktok.com/@ur.469983" target="_blank" class="btn-custom btn-tiktok">
                 <i class="fab fa-tiktok"></i> TikTok
             </a>
 
-            <a href="#" class="btn btn-custom btn-secondary" onclick="alert('Maaf, link ini belum tersedia!')">
-                <i class="fas fa-hourglass-start"></i> Segera Hadir
+            <a href="https://trakteer.id/username_kamu" class="btn btn-custom btn-trakteer" target="_blank">
+                <i class="fas fa-heart"></i> Trakteer
+            </a>
+
+            <a href="#" onclick="alert('Masih dalam pengembangan')" class="btn-custom btn-disabled">
+                <i class="fas fa-hourglass"></i> Coming Soon
             </a>
 
         </div>
+
+        <div class="footer-text">
+            Thx for your support :D
+        </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
